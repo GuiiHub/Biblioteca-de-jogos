@@ -7,13 +7,13 @@ Lucas, 22 anos, gamer casual que tem mais de 80 jogos espalhados em Steam, PS5 e
 __________________________________________________________________________________________________________________________________________
 
 # Classes
-'''
+```
 Jogo                → dados de cada jogo
 Plataforma          → Steam, PS5, Xbox...
 Avaliacao           → nota e comentário do usuário
 Biblioteca          → coleção completa do usuário
 Usuario             → dono da biblioteca
-'''
+````
 ________________________________________________________________________________________________________________
 
 # Diagrama de classes
