@@ -14,3 +14,59 @@ Avaliacao           → nota e comentário do usuário
 Biblioteca          → coleção completa do usuário
 Usuario             → dono da biblioteca
 '''
+________________________________________________________________________________________________________________
+
+# Diagrama de classes
+
+'''
+Usuario
+├── total_usuarios (classe)
+├── __nome, __username
+├── __biblioteca → Biblioteca
+└── exibir_perfil()
+
+Biblioteca
+├── __jogos → [Jogo]
+├── adicionar/remover_jogo()
+├── listar_todos/zerados()
+├── buscar_por_genero()
+└── media_horas()
+
+Jogo
+├── total_jogos (classe)
+├── __titulo, __genero, __horas_jogadas, __zerado
+├── __plataforma → Plataforma
+├── __avaliacao  → Avaliacao
+└── exibir()
+
+Plataforma              Avaliacao
+├── __nome              ├── __nota
+├── __fabricante        ├── __comentario
+└── get/set...          └── exibir()
+''''''
+Usuario
+├── total_usuarios (classe)
+├── __nome, __username
+├── __biblioteca → Biblioteca
+└── exibir_perfil()
+
+Biblioteca
+├── __jogos → [Jogo]
+├── adicionar/remover_jogo()
+├── listar_todos/zerados()
+├── buscar_por_genero()
+└── media_horas()
+
+Jogo
+├── total_jogos (classe)
+├── __titulo, __genero, __horas_jogadas, __zerado
+├── __plataforma → Plataforma
+├── __avaliacao  → Avaliacao
+└── exibir()
+
+Plataforma              Avaliacao
+├── __nome              ├── __nota
+├── __fabricante        ├── __comentario
+└── get/set...          └── exibir()
+'''
+
