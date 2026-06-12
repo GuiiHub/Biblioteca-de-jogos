@@ -18,7 +18,7 @@ ________________________________________________________________________________
 
 # Diagrama de classes
 
-'''
+```
 Usuario
 ├── total_usuarios (classe)
 ├── __nome, __username
@@ -68,5 +68,5 @@ Plataforma              Avaliacao
 ├── __nome              ├── __nota
 ├── __fabricante        ├── __comentario
 └── get/set...          └── exibir()
-'''
+```
 
