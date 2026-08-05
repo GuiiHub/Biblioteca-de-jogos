@@ -114,7 +114,7 @@ else:
                 st.markdown(f"**Status:** {status_badge}")
                 st.markdown(f"**Tempo:** `{jogo.horas_jogadas:.0f}h jogadas`")
             
-            # Informações específicas de Single-player ou Multiplayer
+            # Informações específicas de Single-player ou Multiplayer.
             if jogo.tipo() == "Single-player":
                 prog = jogo.progresso()
                 st.progress(int(prog) / 100.0, text=f"Progresso da Campanha: **{prog:.1f}%**")
