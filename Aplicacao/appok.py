@@ -91,12 +91,44 @@ if termo_busca:
     jogos_parciais = lib.buscar_por_genero_parcial(termo_busca)
     jogos_exibicao = [j for j in jogos_exibicao if j in jogos_parciais]
 
-# 7. Listagem na Interface
+# 7. Listagem na Interface (Visual Moderno em Cards)
 st.subheader(f"📚 Catálogo ({len(jogos_exibicao)} jogos encontrados)")
 
 if not jogos_exibicao:
-    st.info("Nenhum jogo encontrado com os filtros aplicados.")
+    st.warning("Nenhum jogo encontrado com os filtros aplicados.")
 else:
     for jogo in jogos_exibicao:
-        with st.container():
-            st.code(jogo.exibir(), language="markdown")
+        # Cria um card com borda para cada jogo
+        with st.container(border=True):
+            col_header1, col_header2 = st.columns([3, 1])
+            
+            # Título com ícone de favorito e status
+            fav = " ❤️" if jogo.favorito else ""
+            status_badge = "✅ Zerado" if jogo.zerado else "⚠️ Em andamento"
+            
+            with col_header1:
+                st.markdown(f"### {jogo.titulo}{fav}")
+                st.caption(f"**{jogo.genero}**  •  {jogo.tipo()}  •  🖥️ {jogo.plataforma.nome}")
+            
+            with col_header2:
+                st.markdown(f"**Status:** {status_badge}")
+                st.markdown(f"**Tempo:** `{jogo.horas_jogadas:.0f}h jogadas`")
+            
+            # Informações específicas de Single-player ou Multiplayer
+            if jogo.tipo() == "Single-player":
+                prog = jogo.progresso()
+                st.progress(int(prog) / 100.0, text=f"Progresso da Campanha: **{prog:.1f}%**")
+                if getattr(jogo, "_runs", 0) > 0:
+                    st.caption(f"🔁 **Runs completadas:** {jogo._runs}")
+            
+            elif jogo.tipo() == "Multiplayer":
+                partidas = getattr(jogo, "_partidas", 0)
+                st.markdown(f"🎯 **Total de Partidas Jogadas:** `{partidas}`")
+            
+            # Exibição da Avaliação (se existir)
+            if jogo.avaliacao:
+                rec_icon = "👍 Recomendado" if jogo.avaliacao.recomenda else "👎 Não recomendado"
+                st.info(
+                    f"⭐ **Nota: {jogo.avaliacao.nota:.1f}/10** ({rec_icon})\n\n"
+                    f"*\"{jogo.avaliacao.comentario}\"*"
+                )
