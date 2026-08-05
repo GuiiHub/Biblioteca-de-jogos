@@ -139,10 +139,15 @@ class JogoSingle(Jogo):
         self._runs: int = max(0, runs)
 
     def progresso(self) -> float:
+        # Se o jogo foi zerado, garante 100% automaticamente
+        if self._zerado:
+            return 100.0
+        # Se não foi zerado e não tem campanha cadastrada, fica em 0%
         if self._duracao_campanha == 0:
             return 0.0
+        # Caso contrário, calcula a porcentagem (limitada a 100%)
         return min(100.0, (self._horas_jogadas / self._duracao_campanha) * 100)
-
+    
     def tipo(self) -> str:
         return "Single-player"
 

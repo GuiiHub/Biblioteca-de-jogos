@@ -196,7 +196,9 @@ else:
             # Detalhes específicos de Single-player ou Multiplayer
             if jogo.tipo() == "Single-player":
                 prog = jogo.progresso()
+                # A barra sempre será exibida
                 st.progress(int(prog) / 100.0, text=f"Progresso da Campanha: **{prog:.1f}%**")
+                
                 if getattr(jogo, "_runs", 0) > 0:
                     st.caption(f"🔁 **Runs completadas:** {jogo._runs}")
             
