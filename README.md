@@ -3,5 +3,5 @@ Projeto da disciplina de Princípios de Programação II, utilizando Programaç�
 __________________________________________________________________________________________________________________________________________
 
 ## Contexto / Persona
-Lucas, 22 anos, gamer casual que tem mais de 80 jogos espalhados em Steam, PS5 e Xbox. Ele nunca sabe o que jogar, esquece quais jogos já zerou e não consegue recomendar nada para os amigos. Quer um sistema para catalogar, avaliar e organizar sua coleção.
+Lucas, 22 anos, gamer casual que tem diversos jogos espalhados em Steam, PS5 e Xbox. Ele nunca sabe o que jogar, esquece quais jogos já zerou e não consegue recomendar nada para os amigos. Ele quer um sistema para catalogar, avaliar e organizar sua coleção.
 __________________________________________________________________________________________________________________________________________
