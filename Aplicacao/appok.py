@@ -98,7 +98,7 @@ if not jogos_exibicao:
     st.warning("Nenhum jogo encontrado com os filtros aplicados.")
 else:
     for jogo in jogos_exibicao:
-        # Cria um card com borda para cada jogo
+        # Cria um card com borda para cada jogo.
         with st.container(border=True):
             col_header1, col_header2 = st.columns([3, 1])
             
