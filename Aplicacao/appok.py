@@ -45,8 +45,9 @@ user = st.session_state["usuario"]
 lib = user.biblioteca
 
 # 3. Cabeçalho Principal
+
 st.title("🎮 Dashboard do Usuário")
-st.text(user.exibir())
+st.subheader(user.exibir())
 st.markdown("---")
 
 # 4. Painel de Métricas

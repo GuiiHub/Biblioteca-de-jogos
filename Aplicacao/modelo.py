@@ -303,8 +303,5 @@ class Usuario(Exibivel):
         top_str = f"{top.titulo} ({top.horas_jogadas:.0f}h)" if top else "Nenhum"
         
         return (
-            f"👤 {self._nome} (@{self._username}) | 🏆 Nível: {self._nivel}\n"
-            f"🎮 Jogos: {len(lib)} | ⏱️ Total: {lib.total_horas():.0f}h | "
-            f"Média: {lib.media_horas():.1f}h/jogo\n"
-            f"🥇 Mais jogado: {top_str}"
+            f"👤 {self._nome} (@{self._username}) | 🏆 Nível: {self._nivel}"
         )
