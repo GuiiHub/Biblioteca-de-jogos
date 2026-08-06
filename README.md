@@ -1,5 +1,7 @@
 # Sistema de Biblioteca de Jogos 🎮
 Projeto da disciplina de Princípios de Programação II, utilizando Programação Orientada a Objetos com a linguagem Python.
+
+URL app: https://biblioteca-de-jogos-8g35agv5lt3z7hrstyqeb2.streamlit.app/
 __________________________________________________________________________________________________________________________________________
 
 ## Contexto / Persona
