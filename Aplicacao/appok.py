@@ -26,11 +26,11 @@ if "usuario" not in st.session_state:
 
     j2 = JogoSingle("God of War", "Ação/Aventura", ps5, 25, 20)
     j2.zerado = True
+    j2.favorito = True
     j2.avaliar(Avaliacao(10, "Narrativa impecável."))
 
     j3 = JogoSingle("Hades", "Roguelike", steam, 60, runs=47)
     j3.zerado = True
-    j3.favorito = True
     j3.avaliar(Avaliacao(10, "Impossível parar de jogar."))
 
     j4 = JogoSingle("Resident Evil 4", "Survival Horror", xbox, 15, 16)
