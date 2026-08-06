@@ -143,8 +143,8 @@ filtro_status = st.sidebar.selectbox(
 )
 
 generos = ["Todos"] + lib.generos_disponiveis()
-filtro_genero = st.sidebar.selectbox("Buscar em Hash por Gênero O(1)", generos)
-termo_busca = st.sidebar.text_input("Busca Parcial em Gênero", "")
+filtro_genero = st.sidebar.selectbox("Buscar em Hash por gênero", generos)
+termo_busca = st.sidebar.text_input("Busca parcial em gênero", "")
 
 # Aplicar Filtros
 if filtro_status == "Zerados":
