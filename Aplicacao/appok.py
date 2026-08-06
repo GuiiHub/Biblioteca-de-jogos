@@ -18,7 +18,7 @@ if "usuario" not in st.session_state:
 
     lucas = Usuario("Lucas Mendes", "lucasgamer", "lucas@email.com")
 
-    # Jogos iniciais de exemplo [source: 1]
+    # Jogos iniciais de exemplo
     j1 = JogoSingle("Hollow Knight", "Metroidvania", steam, 40, 35)
     j1.zerado = True
     j1.favorito = True
